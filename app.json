@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Caso Scheduler",
+    "slug": "caso-scheduler",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./casoLogo.png",
+    "splash": {
+      "image": "./casoLogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A2540"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./casoLogo.png",
+        "backgroundColor": "#0A2540"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "local-demo"
+      }
+    }
+  }
+}

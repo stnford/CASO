@@ -1,0 +1,67 @@
+Time boxing for
+students with schedules
+built around Canvas
+assignments
+● Our application connects to the Canvas API to pull
+assignment and exam dates directly, generating a
+personalized daily schedule that ensures students stay
+on top of deadlines and feel confident for exams.
+● Students can add their own events so the schedule
+reflects both academic and personal commitments.
+● By answering a few quick questions about their
+workflow and study habits, each student receives a
+practical, AI-driven schedule tailored to their unique
+needs.
+
+THIS IS A MOBLIE APP FOR BOTH IOS AND ANDRIOD
+
+Deliverables: Update presentation in PA2, add in video demo of working code, link to code to run in class.
+	1	Refined Architecture + Final Wireframes
+	◦	Updated diagrams and screens reflecting feedback or pivot decisions
+	2	Functional Code Prototype
+	◦	Must include:
+	▪	Two-factor login (can be dummy 2FA if needed)
+	▪	Integrated AI tool (e.g., GPT for generation, CodeWhisperer for suggestion)
+	▪	Use of GitHub Copilot, Amazon CodeWhisperer, or Tabnine in development (cite examples)
+	▪	Key user stories from Part 2 implemented
+	3	Ethical Reflection (1–2 slides as a group)
+	◦	What ethical challenges did you face in implementation?
+	◦	How did you ensure responsible AI use and system reliability?
+	◦	What would you improve before real deployment?
+Upload one presentation per group to Canvas:
+	•	PA3_Groupx_Fall2025.PDF 
+
+User Stories
+● As a user, I want to limit what courses or sections of canvas can be accessed by the application so that I
+can keep my privacy while using the application.
+● As a user, I want to choose what the application specifically considers when making a scheduled so that
+my schedule can align with my personal habits.
+● As a user, I want to be able to modify a generated schedule so that I can have some input in the event
+that the schedule is not as efficient as possible.
+● As a user, I want to have the ability to disable notifications so that I can choose not receive messages
+from the application if I find them to be bothersome.
+Emmanuel SMU Fall 2025 User Stories
+● As a user, I want the AI to analyze my workload and suggest optimal time blocks for studying so that I
+can focus on learning rather than manually planning.
+● As a user, I want to integrate my personal calendar (e.g., Google Calendar, Apple Calendar) so that the
+generated schedule automatically accounts for my existing events and commitments.
+● As a user, I want to receive smart reminders that adapt based on my progress, so that the app
+encourages me without overwhelming me.
+● As a user, I want to set specific focus hours and break periods so that the schedule reflects how I
+actually work best throughout the day.
+
+TechStack Rationale
+● Front End:
+○ React Native - The framework used to make the application cross-platform
+○ Typescript - The programming language used to code the front end
+● Back End:
+○ OpenAI API - AI tool integration that allows for users to get personalized study and homework schedules
+○ Javascript - The programming language used to code the back end
+○ Node.js - The runtime environment used to run the javascript code
+○ AWS - The platform used to host the application server, store files related to the application, track application performance, test
+and deploy the application pipeline, store important credentials, and manage the execution of long tasks
+○ OneSignal - The tool used to send notifications to users
+● Database:
+○ MySQL - The software used to create and manage the application’s database
+● New Additions:
+○ Auth0 - The service used to implement two-factor authentication for login
