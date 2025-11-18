@@ -4,6 +4,7 @@ Cross-platform prototype that uses React Native and Expo to build Canvas-aware, 
 
 ## How to start the application
 - Install deps: `npm install` (or `pnpm install`).
+- Might need to run run npx expo install react-native-web react-dom @expo/metro-runtime to use in a web browser.
 - Run: `npx expo start` then open iOS/Android/web from the Expo devtools.
 - Demo login: any email/password → code `123456`.
 
@@ -31,8 +32,3 @@ These load into the bundle for the prototype only. Be sure to avoid using produc
 - Network calls are not executed automatically in this repo. You must supply env vars to enable live Canvas/Gemini runs.
 - Be sure to respect privacy: keep tokens in `.env` and never commit them. Also, the UI shows only course names and assignments pulled for the current logged-in user.
 - Notifications are represented as toggles only and currently do not function (will wire to OneSignal/FCM in a later build).
-
-## Ethical + compliance talking points
-- Data minimization: course access toggle limits scope of Canvas data processed by the AI.
-- Transparency: UI indicates when data is mocked vs. live.
-- Safety: two-factor flow scaffolded; real deployments should use Auth0/OTP delivery, vault-stored secrets, and key rotation.
