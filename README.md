@@ -1,36 +1,36 @@
 # CASO Canvas Companion (Expo prototype)
 
-Cross-platform React Native/Expo prototype that builds Canvas-aware, AI-assisted study schedules with personal calendar blending, user-controlled course visibility, and a 2FA-style login demo.
+Cross-platform prototype that uses React Native and Expo to build Canvas-aware, AI-assisted study schedules that features blending of personal calendars, controlling course visibility, and a 2FA-style login demo.
 
-## Quick start
+## How to start the application
 - Install deps: `npm install` (or `pnpm install`).
 - Run: `npx expo start` then open iOS/Android/web from the Expo devtools.
 - Demo login: any email/password → code `123456`.
 
-## Environment variables (do not commit secrets)
+## Getting the environment variables (do not commit)
 Create a local `.env` file (gitignored) with:
 ```
 EXPO_PUBLIC_CANVAS_DOMAIN=yourcanvas.instructure.com
 EXPO_PUBLIC_CANVAS_TOKEN=your_canvas_token_here
 EXPO_PUBLIC_GEMINI_API_KEY=your_gemini_key_here
 ```
-These load into the bundle for the prototype only. Avoid using production tokens; rotate tokens after demos.
+These load into the bundle for the prototype only. Be sure to avoid using production tokens and rotate tokens after a demo.
 
-## Features implemented
-- Two-factor style login (dummy code flow).
-- Canvas course access toggles and sync button (falls back to mock data if unset/offline).
-- Personal events add/edit + include/exclude toggles.
-- Preferences for focus window, break length, notification mode, and what the AI should consider.
+## Features implemented so far
+- Two-factor login (currently uses a dummy 2FA).
+- Canvas course access toggles and sync button (falls back to mock data if it is not set/offline).
+- Personal events add/edit option and include/exclude toggles.
+- Preferences for focus window, break length, notification mode, and what should be considered by the AI.
 - AI schedule generation:
   - Local heuristic planner (no network).
   - Gemini API planner (requires `EXPO_PUBLIC_GEMINI_API_KEY`).
-- Manual block adjustments (+/- 30m).
-- Uses provided `casoLogo.png` for branding; styling in `App.tsx`.
+- Manual block adjustments (must click +/-30m).
+- Uses CASO logo for branding, and styling is in `App.tsx`.
 
-## Notes for demo
-- Network calls are not executed automatically in this repo; supply env vars to enable live Canvas/Gemini runs.
-- Respect privacy: keep tokens in `.env`, never commit them. The UI shows only course names and assignments pulled for the logged-in user.
-- Notifications are represented as toggles only (wire to OneSignal/FCM in a production build).
+## Demo usage notes
+- Network calls are not executed automatically in this repo. You must supply env vars to enable live Canvas/Gemini runs.
+- Be sure to respect privacy: keep tokens in `.env` and never commit them. Also, the UI shows only course names and assignments pulled for the current logged-in user.
+- Notifications are represented as toggles only and currently do not function (will wire to OneSignal/FCM in a later build).
 
 ## Ethical + compliance talking points
 - Data minimization: course access toggle limits scope of Canvas data processed by the AI.
